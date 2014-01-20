@@ -12,8 +12,10 @@ int main()
 	out.open("modes.inf");
 
 	int adapterCount = d3dObject->GetAdapterCount();
+	
 	for (int i = 0; i < adapterCount; ++i)
 	{
+		out<<"Adapter "<<i<<std::endl;
 		int modeCount = d3dObject->GetAdapterModeCount(i, fmt);
 		std::cout<<"Found "<<modeCount<<" modes\n";
 		for (int j = 0; j < modeCount; ++j)
